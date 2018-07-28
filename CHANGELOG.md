@@ -1,5 +1,14 @@
 # Change Log
 
+## [3.1.0](https://github.com/indigotech/nativescript-local-notifications/tree/3.1.0) (2018-07-28)
+[Full Changelog](https://github.com/indigotech/nativescript-local-notifications/compare/3.0.0...3.0.0)
+
+**Implemented enhancements:**
+
+- Add autocancel option (Android only)
+- Re-added priority option (Android only)
+- Add vibrate option (Android only)
+
 ## [3.0.0](https://github.com/EddyVerbruggen/nativescript-local-notifications/tree/3.0.0) (2018-07-XX)
 [Full Changelog](https://github.com/EddyVerbruggen/nativescript-local-notifications/compare/2.0.4...3.0.0)
 
