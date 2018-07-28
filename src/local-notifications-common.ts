@@ -131,6 +131,13 @@ export interface ScheduleOptions {
    * Buttons or text input.
    */
   actions?: Array<NotificationAction>;
+
+  /**
+   * Set the vibration pattern
+   * 
+   * Android only.
+   */
+  vibrate?: Array<number>
 }
 
 export interface ReceivedNotification {
