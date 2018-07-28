@@ -220,6 +220,10 @@ export class LocalNotificationsImpl extends LocalNotificationsCommon implements 
             options.priority = options.forceShowWhenInForeground ? 1 : 0;
           }
 
+          if (options.autocancel === undefined) {
+            options.autocancel = true;
+          }
+
           // custom sounds do not currently work, so using the default in all cases except when set to null
           const useDefaultSound = options.sound !== null;
 
@@ -248,7 +252,7 @@ export class LocalNotificationsImpl extends LocalNotificationsCommon implements 
               .setContentText(options.body)
               .setSmallIcon(options.smallIcon)
               .setLargeIcon(options.largeIconDrawable)
-              .setAutoCancel(true) // removes the notification from the statusbar once tapped
+              .setAutoCancel(options.autocancel) // removes the notification from the statusbar once tapped
               // .setSound(options.sound)
               .setNumber(options.badge)
               .setOngoing(options.ongoing)

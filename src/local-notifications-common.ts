@@ -146,6 +146,13 @@ export interface ScheduleOptions {
    * Overrides `forceShowWhenInForeground`.
    */
   priority?: number;
+
+  /**
+   * Removes the notification from the statusbar once tapped
+   * 
+   * Android only.
+   */
+  autocancel?: boolean;
 }
 
 export interface ReceivedNotification {
