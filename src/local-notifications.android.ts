@@ -216,6 +216,10 @@ export class LocalNotificationsImpl extends LocalNotificationsCommon implements 
             options.vibrate = [];
           }
 
+          if (options.priority === undefined) {
+            options.priority = options.forceShowWhenInForeground ? 1 : 0;
+          }
+
           // custom sounds do not currently work, so using the default in all cases except when set to null
           const useDefaultSound = options.sound !== null;
 
@@ -250,7 +254,7 @@ export class LocalNotificationsImpl extends LocalNotificationsCommon implements 
               .setOngoing(options.ongoing)
               .setTicker(options.ticker || options.body)
               .setVibrate(options.vibrate)
-              .setPriority(options.forceShowWhenInForeground ? 1 : 0); // 0 = default, 1 = high
+              .setPriority(options.priority); // 0 = default, 1 = high
 
           if (android.os.Build.VERSION.SDK_INT >= 26 && builder.setChannelId) {
             const channelId = "myChannelId"; // package scoped, so no need to add it ourselves

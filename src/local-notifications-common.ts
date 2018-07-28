@@ -138,6 +138,14 @@ export interface ScheduleOptions {
    * Android only.
    */
   vibrate?: Array<number>
+
+  /**
+   * Set the priority from -2 to 2
+   * 
+   * Android only.
+   * Overrides `forceShowWhenInForeground`.
+   */
+  priority?: number;
 }
 
 export interface ReceivedNotification {
