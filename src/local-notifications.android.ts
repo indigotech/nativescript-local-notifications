@@ -245,6 +245,7 @@ export class LocalNotificationsImpl extends LocalNotificationsCommon implements 
               .setNumber(options.badge)
               .setOngoing(options.ongoing)
               .setTicker(options.ticker || options.body)
+              .setVibrate(options.vibrate)
               .setPriority(options.forceShowWhenInForeground ? 1 : 0); // 0 = default, 1 = high
 
           if (android.os.Build.VERSION.SDK_INT >= 26 && builder.setChannelId) {
