@@ -1,9 +1,8 @@
 .idea/
 .vscode/
 node_modules/
-*.js
-src/*.d.ts
-!src/index.d.ts
-!src/references.d.ts
+!*.d.ts
+!index.d.ts
+!references.d.ts
 demo/platforms
 publish/package/

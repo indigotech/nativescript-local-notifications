@@ -1,7 +1,10 @@
 .idea/
 .vscode/
+demo/
 native-src/
+publish/
 *.ts
 !*.d.ts
 tsconfig.json
 references.d.ts
+package-lock.json
